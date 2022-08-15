@@ -11,7 +11,7 @@ public class ContadorDeAlunos implements ServicoConta{
 	Set<Integer> total = new HashSet<>();
 	
 	
-	public String verificardo(char curso) throws ExcecaoPersonalizada {
+	public String verificando(char curso) throws ExcecaoPersonalizada {
 		String msg = null;
 		if (!(curso == 'A') && !(curso == 'B') && !(curso == 'C')) {
 			throw new ExcecaoPersonalizada(msg = "Error verifique a classe digitada!");

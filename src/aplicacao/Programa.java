@@ -23,7 +23,7 @@ public class Programa {
 				System.out.print("Digite a classe (A/B/C): ");
 				char curso = sc.next().charAt(0);
 
-				contadorDeAlunos.verificardo(curso);
+				contadorDeAlunos.verificando(curso);
 
 				System.out.print("Quanto alunos deseja verificar na classe " + curso + "? ");
 				int quantidadeDeAlunos = sc.nextInt();
