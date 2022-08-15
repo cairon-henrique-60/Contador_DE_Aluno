@@ -9,7 +9,16 @@ import excecoes.ExcecaoPersonalizada;
 public class ContadorDeAlunos implements ServicoConta{
 
 	Set<Integer> total = new HashSet<>();
-
+	
+	
+	public String verificardo(char curso) throws ExcecaoPersonalizada {
+		String msg = null;
+		if (!(curso == 'A') && !(curso == 'B') && !(curso == 'C')) {
+			throw new ExcecaoPersonalizada(msg = "Error verifique a classe digitada!");
+		}
+		return msg;
+	}
+	
 	@Override
 	public int comparadorDeAluno(Aluno aluno) throws ExcecaoPersonalizada {
 		
@@ -17,9 +26,6 @@ public class ContadorDeAlunos implements ServicoConta{
 		Set<Integer> B = new HashSet<>();
 		Set<Integer> C = new HashSet<>();
 
-		if (!(aluno.getCurso() == 'A') && !(aluno.getCurso() == 'B') && !(aluno.getCurso() == 'C')) {
-			throw new ExcecaoPersonalizada("Error verifique a classe digitada!");
-		}
 		if (aluno.getCurso() == 'A') {
 			A.add(aluno.getCodigoDoAluno());
 		}

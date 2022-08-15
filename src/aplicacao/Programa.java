@@ -10,6 +10,7 @@ public class Programa {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+
 		try {
 
 			ContadorDeAlunos contadorDeAlunos = new ContadorDeAlunos();
@@ -18,8 +19,11 @@ public class Programa {
 			int contador = sc.nextInt();
 
 			for (int i = 0; i < contador; i++) {
+
 				System.out.print("Digite a classe (A/B/C): ");
 				char curso = sc.next().charAt(0);
+
+				contadorDeAlunos.verificardo(curso);
 
 				System.out.print("Quanto alunos deseja verificar na classe " + curso + "? ");
 				int quantidadeDeAlunos = sc.nextInt();
@@ -27,7 +31,7 @@ public class Programa {
 				for (int j = 0; j < quantidadeDeAlunos; j++) {
 					System.out.print("Digite o codigo do aluno: ");
 					int codigoDoAluno = sc.nextInt();
-					
+
 					contadorDeAlunos.comparadorDeAluno(new Aluno(curso, codigoDoAluno));
 
 				}
